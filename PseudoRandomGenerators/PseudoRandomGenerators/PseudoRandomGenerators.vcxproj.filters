@@ -27,13 +27,22 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IGeneratorBase.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="StandartGenerator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PseudoRandomGenerators.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StandartGenerator.cpp">
+      <Filter>Generators</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
