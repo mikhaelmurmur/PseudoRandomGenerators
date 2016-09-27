@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "LehmerHighGenerator.h"
+#include "LehmerLowGenerator.h"
 #include "LehmerGeneratorGeneral.h"
 #include <iostream>
 #include <memory>
@@ -10,7 +10,7 @@
 int main()
 {
     int k = 10;
-    std::shared_ptr<IGeneratorBase> generator = std::make_shared<CLehmerHighGenerator>();
+    std::shared_ptr<IGeneratorBase> generator = std::make_shared<CLehmerLowGenerator>();
     std::shared_ptr<IGeneratorBase> generatorGeneral = std::make_shared<CLehmerGeneratorGeneral>();
     while (k-->0)
     {
