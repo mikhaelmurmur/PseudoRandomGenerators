@@ -4,7 +4,7 @@ class CStandartGenerator :
     public IGeneratorBase
 {
 public:
-    explicit CStandartGenerator(lint seed = lint(0));
+    explicit CStandartGenerator(const lint& seed = lint(0));
     virtual ~CStandartGenerator()=default;
     lint GetRandom()override;
 };

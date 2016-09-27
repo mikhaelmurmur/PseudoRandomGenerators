@@ -2,7 +2,7 @@
 #include "StandartGenerator.h"
 
 
-CStandartGenerator::CStandartGenerator(lint seed)
+CStandartGenerator::CStandartGenerator(const lint& seed)
 {
     m_seed = seed;
     srand(m_seed%NTL_MAX_INT);
