@@ -1,13 +1,15 @@
 #pragma once
 #include <NTL/ZZ.h> 
 
+typedef NTL::ZZ lint;
+
 class IGeneratorBase
 {
 public:
-    explicit IGeneratorBase(NTL::ZZ seed = NTL::ZZ(0))
+    explicit IGeneratorBase(lint seed = lint(0))
         :m_seed(seed){}
     virtual ~IGeneratorBase() = default;
-    virtual NTL::ZZ GetRandom() = 0;
+    virtual lint GetRandom() = 0;
 protected:
-    NTL::ZZ m_seed;
+    lint m_seed;
 };

@@ -4,8 +4,8 @@ class CStandartGenerator :
     public IGeneratorBase
 {
 public:
-    explicit CStandartGenerator(NTL::ZZ seed = NTL::ZZ(0));
+    explicit CStandartGenerator(lint seed = lint(0));
     virtual ~CStandartGenerator()=default;
-    NTL::ZZ GetRandom()override;
+    lint GetRandom()override;
 };
 

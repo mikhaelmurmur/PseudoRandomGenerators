@@ -2,13 +2,13 @@
 #include "StandartGenerator.h"
 
 
-CStandartGenerator::CStandartGenerator(NTL::ZZ seed)
+CStandartGenerator::CStandartGenerator(lint seed)
 {
     m_seed = seed;
     srand(m_seed%NTL_MAX_INT);
 }
 
-NTL::ZZ CStandartGenerator::GetRandom()
+lint CStandartGenerator::GetRandom()
 {
-    return NTL::ZZ(rand() % 2);
+    return lint(rand() % 2);
 }

@@ -33,6 +33,9 @@
     <ClInclude Include="StandartGenerator.h">
       <Filter>Generators</Filter>
     </ClInclude>
+    <ClInclude Include="LehmerGeneratorGeneral.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -43,6 +46,9 @@
     </ClCompile>
     <ClCompile Include="StandartGenerator.cpp">
       <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="LehmerGeneratorGeneral.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
