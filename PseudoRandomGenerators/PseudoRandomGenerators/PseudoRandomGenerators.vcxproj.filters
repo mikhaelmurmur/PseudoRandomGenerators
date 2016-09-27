@@ -3,6 +3,7 @@
   <ItemGroup>
     <Filter Include="Generators">
       <UniqueIdentifier>{12940291-2a50-44d2-bde7-b9dd9fd1fa37}</UniqueIdentifier>
+      <Extensions>h;cpp</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,6 +27,9 @@
     <ClInclude Include="LehmerLowGenerator.h">
       <Filter>Generators</Filter>
     </ClInclude>
+    <ClInclude Include="LibrarianGenerator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">
@@ -40,6 +44,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="LehmerLowGenerator.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="LibrarianGenerator.cpp">
       <Filter>Generators</Filter>
     </ClCompile>
   </ItemGroup>

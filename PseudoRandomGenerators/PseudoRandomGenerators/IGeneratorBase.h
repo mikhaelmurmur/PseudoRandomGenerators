@@ -10,7 +10,7 @@ public:
         :m_seed(seed){}
     virtual ~IGeneratorBase() = default;
     virtual lint GetRandom() = 0;
-    void SetSeed(const lint& seed);
+    virtual void SetSeed(const lint& seed);
 protected:
     lint m_seed;
 };

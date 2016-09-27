@@ -76,6 +76,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>../../NTL/include/;$(IncludePath)</IncludePath>
+    <ExecutablePath>D:\Study\AsymCrypto\Labs\PseudoRandomGenerators\PseudoRandomGenerators\PseudoRandomGenerators\PseudoRandomGenerators\RandomText;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -153,6 +154,7 @@
     <ClInclude Include="LehmerGeneratorGeneral.h" />
     <ClInclude Include="LehmerHighGenerator.h" />
     <ClInclude Include="LehmerLowGenerator.h" />
+    <ClInclude Include="LibrarianGenerator.h" />
     <ClInclude Include="StandartGenerator.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -161,6 +163,7 @@
     <ClCompile Include="LehmerGeneratorGeneral.cpp" />
     <ClCompile Include="LehmerHighGenerator.cpp" />
     <ClCompile Include="LehmerLowGenerator.cpp" />
+    <ClCompile Include="LibrarianGenerator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StandartGenerator.cpp" />
     <ClCompile Include="stdafx.cpp">
