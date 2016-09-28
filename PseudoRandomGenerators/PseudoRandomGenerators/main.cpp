@@ -2,14 +2,14 @@
 //
 
 #include "stdafx.h"
-#include "LibrarianGenerator.h"
+#include "BBSGenerator.h"
 #include <iostream>
 #include <memory>
 
 int main()
 {
-    int k = 10;
-    std::shared_ptr<IGeneratorBase> generator = std::make_shared<CLibrarianGenerator>();
+    int k = 10000;
+    std::shared_ptr<IGeneratorBase> generator = std::make_shared<CBBSGenerator>();
     while (k-->0)
     {
         std::cout << k << ' ' << generator->GetRandom() << std::endl;
