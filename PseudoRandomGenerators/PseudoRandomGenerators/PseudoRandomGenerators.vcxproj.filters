@@ -39,6 +39,9 @@
     <ClInclude Include="BBSGeneratorByte.h">
       <Filter>Generators</Filter>
     </ClInclude>
+    <ClInclude Include="GeneratorCreator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">
@@ -65,6 +68,9 @@
       <Filter>Generators</Filter>
     </ClCompile>
     <ClCompile Include="BBSGeneratorByte.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratorCreator.cpp">
       <Filter>Generators</Filter>
     </ClCompile>
   </ItemGroup>

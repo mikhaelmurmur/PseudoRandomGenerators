@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="BBSGenerator.h" />
     <ClInclude Include="BBSGeneratorByte.h" />
+    <ClInclude Include="GeneratorCreator.h" />
     <ClInclude Include="IGeneratorBase.h" />
     <ClInclude Include="LehmerGeneratorGeneral.h" />
     <ClInclude Include="LehmerHighGenerator.h" />
@@ -165,6 +166,7 @@
   <ItemGroup>
     <ClCompile Include="BBSGenerator.cpp" />
     <ClCompile Include="BBSGeneratorByte.cpp" />
+    <ClCompile Include="GeneratorCreator.cpp" />
     <ClCompile Include="LehmerGeneratorGeneral.cpp" />
     <ClCompile Include="LehmerHighGenerator.cpp" />
     <ClCompile Include="LehmerLowGenerator.cpp" />
