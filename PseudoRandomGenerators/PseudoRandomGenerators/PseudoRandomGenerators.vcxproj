@@ -154,6 +154,7 @@
     <ClInclude Include="BBSGeneratorByte.h" />
     <ClInclude Include="GeneratorCreator.h" />
     <ClInclude Include="IGeneratorBase.h" />
+    <ClInclude Include="ITestBase.h" />
     <ClInclude Include="LehmerGeneratorGeneral.h" />
     <ClInclude Include="LehmerHighGenerator.h" />
     <ClInclude Include="LehmerLowGenerator.h" />

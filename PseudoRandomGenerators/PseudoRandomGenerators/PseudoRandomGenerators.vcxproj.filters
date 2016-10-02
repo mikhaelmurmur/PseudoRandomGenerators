@@ -42,6 +42,9 @@
     <ClInclude Include="GeneratorCreator.h">
       <Filter>Generators</Filter>
     </ClInclude>
+    <ClInclude Include="ITestBase.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">

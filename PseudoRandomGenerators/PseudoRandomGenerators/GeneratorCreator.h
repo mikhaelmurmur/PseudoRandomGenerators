@@ -19,6 +19,5 @@ public:
     };
 
     std::shared_ptr<IGeneratorBase> CreateGenerator(GeneratorType generatorType,lint seed = lint(0))const;
-    
 };
 

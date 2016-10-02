@@ -4,14 +4,13 @@
 #include "stdafx.h"
 #include "GeneratorCreator.h"
 #include <iostream>
-#include <memory>
 
 
 int main()
 {
     CGeneratorCreator generatorCreator;
     int k = 10000;
-    std::shared_ptr<IGeneratorBase> generator = generatorCreator.CreateGenerator(CGeneratorCreator::BBS,lint(2));
+    auto generator = generatorCreator.CreateGenerator(CGeneratorCreator::BBS);
     while (k-->0)
     {
         std::cout << k << ' ' << generator->GetRandom() << std::endl;

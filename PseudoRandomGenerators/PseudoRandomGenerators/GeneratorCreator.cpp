@@ -27,3 +27,5 @@ std::shared_ptr<IGeneratorBase> CGeneratorCreator::CreateGenerator(GeneratorType
         return std::make_shared<CStandartGenerator>(seed);
     }
 }
+
+
