@@ -45,6 +45,15 @@
     <ClInclude Include="ITestBase.h">
       <Filter>Generators</Filter>
     </ClInclude>
+    <ClInclude Include="GeffeGenerator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="L20Generator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearShiftRegister.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">
@@ -74,6 +83,15 @@
       <Filter>Generators</Filter>
     </ClCompile>
     <ClCompile Include="GeneratorCreator.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="GeffeGenerator.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="L20Generator.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearShiftRegister.cpp">
       <Filter>Generators</Filter>
     </ClCompile>
   </ItemGroup>

@@ -152,13 +152,16 @@
   <ItemGroup>
     <ClInclude Include="BBSGenerator.h" />
     <ClInclude Include="BBSGeneratorByte.h" />
+    <ClInclude Include="GeffeGenerator.h" />
     <ClInclude Include="GeneratorCreator.h" />
     <ClInclude Include="IGeneratorBase.h" />
     <ClInclude Include="ITestBase.h" />
+    <ClInclude Include="L20Generator.h" />
     <ClInclude Include="LehmerGeneratorGeneral.h" />
     <ClInclude Include="LehmerHighGenerator.h" />
     <ClInclude Include="LehmerLowGenerator.h" />
     <ClInclude Include="LibrarianGenerator.h" />
+    <ClInclude Include="LinearShiftRegister.h" />
     <ClInclude Include="StandartGenerator.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -167,11 +170,14 @@
   <ItemGroup>
     <ClCompile Include="BBSGenerator.cpp" />
     <ClCompile Include="BBSGeneratorByte.cpp" />
+    <ClCompile Include="GeffeGenerator.cpp" />
     <ClCompile Include="GeneratorCreator.cpp" />
+    <ClCompile Include="L20Generator.cpp" />
     <ClCompile Include="LehmerGeneratorGeneral.cpp" />
     <ClCompile Include="LehmerHighGenerator.cpp" />
     <ClCompile Include="LehmerLowGenerator.cpp" />
     <ClCompile Include="LibrarianGenerator.cpp" />
+    <ClCompile Include="LinearShiftRegister.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StandartGenerator.cpp" />
     <ClCompile Include="stdafx.cpp">
