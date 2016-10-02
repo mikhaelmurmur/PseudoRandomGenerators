@@ -30,6 +30,21 @@
     <ClInclude Include="LibrarianGenerator.h">
       <Filter>Generators</Filter>
     </ClInclude>
+    <ClInclude Include="BBSGenerator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="ZZHelper.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="BBSGeneratorByte.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratorCreator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="ITestBase.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">
@@ -47,6 +62,18 @@
       <Filter>Generators</Filter>
     </ClCompile>
     <ClCompile Include="LibrarianGenerator.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="BBSGenerator.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="ZZHelper.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="BBSGeneratorByte.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratorCreator.cpp">
       <Filter>Generators</Filter>
     </ClCompile>
   </ItemGroup>
