@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "L20Generator.h"
-
+#include "ZZHelper.h"
 
  const std::deque<int> CL20_Generator::ms_L20Coefs = { 0,11,15,17 };
 
@@ -20,5 +20,5 @@ void CL20_Generator::GenerateStates(const lint& number)
     m_L20.SetCoefs(ms_L20Coefs);
     // the same
     lint a = number&(1048576);
-    m_L20.SetState(ms_L20Coefs);  // лажа
+    m_L20.SetState(ZZHelper::ParseDequeFromLint(a, 20));
 }

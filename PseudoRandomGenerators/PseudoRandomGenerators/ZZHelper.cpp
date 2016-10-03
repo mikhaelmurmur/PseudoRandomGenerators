@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "ZZHelper.h"
 
-
 namespace ZZHelper
 {
     lint LintFromHex(char value)
@@ -36,4 +35,29 @@ namespace ZZHelper
         return result;
     }
     
+    lint Merge3ValuesOfLint(const lint& value9, const lint& value10, const lint& value11) 
+    {
+        return value9 + (value10 << 9) + (value11 << 19);
+    }
+
+    lint CycleBitShift(lint number,char letter) 
+    {
+        if (letter == 'r')
+        {
+            lint firstDigit = number & 1;
+
+        }
+        return lint(0);
+    }
+
+    std::deque<int> ParseDequeFromLint(lint number, int numberOfDigits)
+    {
+        std::deque<int> resultDeque;
+        for (int i = 0; i < numberOfDigits; ++i)
+        {
+            resultDeque.push_back((number%NTL_MAX_INT) & 1);
+            number >>= 1;
+        }
+        return resultDeque;
+    }
 }

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "GeffeGenerator.h"
 #include "LinearShiftRegister.h"
+#include "ZZHelper.h"
 
 const std::deque<int> CGeffeGenerator::m_L9Coefs = { 0,1,3,4 };
 const std::deque<int> CGeffeGenerator::m_L10Coefs = { 0,3 };
@@ -12,7 +13,6 @@ CGeffeGenerator::CGeffeGenerator(const lint& seed)
 {
     m_seed = seed;
     GenerateStates(seed);
-
 }
 
 
@@ -31,19 +31,8 @@ void CGeffeGenerator::GenerateStates(const lint& number)
     // i tried to generate 3 states from input number. Dont ask why)
     lint a = number&(511);//(1<<8 - 1)
     lint b = number&(524287 - 511);
-    lint c = number&(1073741824 - 524287);
-    m_L9.SetState(ParseDequeFromLint(a, 9));
-    m_L10.SetState(ParseDequeFromLint(b, 10));
-    m_L11.SetState(ParseDequeFromLint(c, 11));
-}
-
-std::deque<int> CGeffeGenerator::ParseDequeFromLint(lint number, int numberOfDigits)
-{
-    std::deque<int> resultDeque;
-    for (int i = 0; i < numberOfDigits; ++i)
-    {
-        resultDeque.push_back((number%NTL_MAX_INT) & 1);
-        number >>= 1;
-    }
-    return resultDeque;
+    lint c = number&(1073741823 - 524287);
+    m_L9.SetState(ZZHelper::ParseDequeFromLint(a, 9));
+    m_L10.SetState(ZZHelper::ParseDequeFromLint(b, 10));
+    m_L11.SetState(ZZHelper::ParseDequeFromLint(c, 11));
 }

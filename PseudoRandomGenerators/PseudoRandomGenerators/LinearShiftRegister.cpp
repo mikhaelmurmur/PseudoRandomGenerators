@@ -14,7 +14,7 @@ int CLinearShiftRegister::GetNextBit()
     }
     int result = m_registerState.front();
     m_registerState.pop_front();
-    m_registerState.push_back(nextBit);
+    m_registerState.push_front(nextBit);
     return result % 2;
     //прибрати в блоці
 }

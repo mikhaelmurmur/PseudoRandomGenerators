@@ -54,6 +54,18 @@
     <ClInclude Include="LinearShiftRegister.h">
       <Filter>Generators</Filter>
     </ClInclude>
+    <ClInclude Include="L89Generator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="WolframGenerator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="BMGenerator.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
+    <ClInclude Include="BMGeneratorByte.h">
+      <Filter>Generators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">
@@ -92,6 +104,18 @@
       <Filter>Generators</Filter>
     </ClCompile>
     <ClCompile Include="LinearShiftRegister.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="L89Generator.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="WolframGenerator.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="BMGenerator.cpp">
+      <Filter>Generators</Filter>
+    </ClCompile>
+    <ClCompile Include="BMGeneratorByte.cpp">
       <Filter>Generators</Filter>
     </ClCompile>
   </ItemGroup>
