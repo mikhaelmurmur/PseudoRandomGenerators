@@ -50,7 +50,7 @@ protected:
     lint GetNextValue();
     const std::string& GetGeneratorName()const { return m_generator->GetName(); }
     static double GetKhiCryteriaTheoretical(int length, EQuantileValue quantile);
-    static double GetKhiCryteriaPractical(const std::vector<int>& values);
+    static double GetKhiCryteriaPractical(const std::vector<int>& values, int length);
 private:
     TestMode m_testMode;
     std::string m_testName;

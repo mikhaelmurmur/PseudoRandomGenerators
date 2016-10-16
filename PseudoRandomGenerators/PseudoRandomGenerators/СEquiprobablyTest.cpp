@@ -5,14 +5,14 @@
 void СEquiprobablyTest::FillResults(int length, TestResult& result,const std::vector<int>& bytesCount)const
 {
     result.m_testName = GetTestName();
-    result.m_generatorName = GetGeneratorName();
+    //result.m_generatorName = GetGeneratorName();
 
     result.m_length = length;
 
     result.m_results[0].m_KhiCryteriaPractical = 
         result.m_results[1].m_KhiCryteriaPractical = 
         result.m_results[2].m_KhiCryteriaPractical = 
-        GetKhiCryteriaPractical(bytesCount);
+        GetKhiCryteriaPractical(bytesCount,length);
 
 
 

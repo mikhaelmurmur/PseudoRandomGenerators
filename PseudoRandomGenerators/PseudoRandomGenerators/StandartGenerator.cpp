@@ -10,5 +10,5 @@ CStandartGenerator::CStandartGenerator(const lint& seed)
 
 lint CStandartGenerator::GetRandom()
 {
-    return lint(rand() % 2);
+    return lint(rand() % 256);
 }
