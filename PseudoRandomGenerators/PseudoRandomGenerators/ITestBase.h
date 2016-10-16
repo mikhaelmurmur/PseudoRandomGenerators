@@ -22,12 +22,7 @@ struct TestResult
     AlphaTestResult m_results[3];
 };
 
-enum EQuantileValue
-{
-    weak,//0.1
-    medium,//0.05
-    strong//0.01
-};
+
 
 class ITestBase
 {
@@ -48,9 +43,7 @@ public:
     const std::string& GetTestName() const{ return m_testName; }
 protected:
     lint GetNextValue();
-    const std::string& GetGeneratorName()const { return m_generator->GetName(); }
-    static double GetKhiCryteriaTheoretical(int length, EQuantileValue quantile);
-    static double GetKhiCryteriaPractical(const std::vector<int>& values, int length);
+    std::string GetGeneratorName()const { return m_generator->GetName(); }
 private:
     TestMode m_testMode;
     std::string m_testName;

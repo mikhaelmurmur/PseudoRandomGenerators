@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include "ITestBase.h"
+#include "ZZHelper.h"
+
 class СEquiprobablyTest :
     public ITestBase
 {
@@ -12,4 +14,6 @@ public:
 
 private:
     void FillResults(int length, TestResult& result,const std::vector<int>& bytesCount)const;
+    static double GetKhiCryteriaTheoretical(int length, ZZHelper::EQuantileValue quantile);
+    static double GetKhiCryteriaPractical(const std::vector<int>& values, int length);
 };

@@ -85,6 +85,9 @@
     <ClInclude Include="XLSResultWriter.h">
       <Filter>ResultWriters</Filter>
     </ClInclude>
+    <ClInclude Include="IndependenceTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">
@@ -145,6 +148,9 @@
     </ClCompile>
     <ClCompile Include="XLSResultWriter.cpp">
       <Filter>ResultWriters</Filter>
+    </ClCompile>
+    <ClCompile Include="IndependenceTest.cpp">
+      <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

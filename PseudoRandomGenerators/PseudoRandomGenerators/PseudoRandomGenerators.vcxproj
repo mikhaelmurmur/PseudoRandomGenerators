@@ -163,6 +163,7 @@
     <ClInclude Include="GeffeGenerator.h" />
     <ClInclude Include="GeneratorCreator.h" />
     <ClInclude Include="IGeneratorBase.h" />
+    <ClInclude Include="IndependenceTest.h" />
     <ClInclude Include="IResultWriter.h" />
     <ClInclude Include="ITestBase.h" />
     <ClInclude Include="L20Generator.h" />
@@ -187,6 +188,7 @@
     <ClCompile Include="BMGeneratorByte.cpp" />
     <ClCompile Include="GeffeGenerator.cpp" />
     <ClCompile Include="GeneratorCreator.cpp" />
+    <ClCompile Include="IndependenceTest.cpp" />
     <ClCompile Include="ITestBase.cpp" />
     <ClCompile Include="L20Generator.cpp" />
     <ClCompile Include="L89Generator.cpp" />

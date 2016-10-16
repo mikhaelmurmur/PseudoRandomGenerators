@@ -1,11 +1,12 @@
 ﻿#include "stdafx.h"
 #include "СEquiprobablyTest.h"
 #include <vector>
+#include "ZZHelper.h"
 
 void СEquiprobablyTest::FillResults(int length, TestResult& result,const std::vector<int>& bytesCount)const
-{
+{//bullshit
     result.m_testName = GetTestName();
-    //result.m_generatorName = GetGeneratorName();
+    result.m_generatorName = GetGeneratorName();
 
     result.m_length = length;
 
@@ -14,22 +15,19 @@ void СEquiprobablyTest::FillResults(int length, TestResult& result,const std::v
         result.m_results[2].m_KhiCryteriaPractical = 
         GetKhiCryteriaPractical(bytesCount,length);
 
-
-
-
-    result.m_results[0].m_KhiCryteriaTheory = GetKhiCryteriaTheoretical(length, weak);
+    result.m_results[0].m_KhiCryteriaTheory = GetKhiCryteriaTheoretical(length, ZZHelper::weak);
     result.m_results[0].m_isAcceptable = result.m_results[0].m_KhiCryteriaPractical 
         < result.m_results[0].m_KhiCryteriaTheory;
     result.m_results[0].m_alpha = 0.1f;
 
 
-    result.m_results[1].m_KhiCryteriaTheory = GetKhiCryteriaTheoretical(length, medium);
+    result.m_results[1].m_KhiCryteriaTheory = GetKhiCryteriaTheoretical(length, ZZHelper::medium);
     result.m_results[1].m_isAcceptable = result.m_results[1].m_KhiCryteriaPractical
         < result.m_results[1].m_KhiCryteriaTheory;
     result.m_results[1].m_alpha = 0.05f;
 
 
-    result.m_results[2].m_KhiCryteriaTheory = GetKhiCryteriaTheoretical(length, strong);
+    result.m_results[2].m_KhiCryteriaTheory = GetKhiCryteriaTheoretical(length, ZZHelper::strong);
     result.m_results[2].m_isAcceptable = result.m_results[2].m_KhiCryteriaPractical
         < result.m_results[2].m_KhiCryteriaTheory;
     result.m_results[2].m_alpha = 0.01f;
@@ -49,3 +47,19 @@ TestResult СEquiprobablyTest::ExecuteTesting(int length)
     return result;
 }
 
+
+double СEquiprobablyTest::GetKhiCryteriaTheoretical(int length, ZZHelper::EQuantileValue quantile)
+{
+    return (sqrt(255 * 2)*GetQuantileValue(quantile) + 255);
+}
+
+double СEquiprobablyTest::GetKhiCryteriaPractical(const std::vector<int>& values, int length)
+{
+    double result = 0;
+    const double mediana = length / 256.;
+    for (auto& value : values)
+    {
+        result += (value - mediana) * (value - mediana) / (mediana);
+    }
+    return result;
+}

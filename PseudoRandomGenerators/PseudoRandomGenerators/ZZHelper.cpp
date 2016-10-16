@@ -60,4 +60,20 @@ namespace ZZHelper
         }
         return resultDeque;
     }
+
+    float GetQuantileValue(EQuantileValue quantile)
+    {
+        switch (quantile)
+        {
+        case weak:
+            return 2.326f;
+
+        case medium:
+            return  2.56f;
+
+        case strong:
+            return 3.175f;
+        }
+        return 0.f;
+    }
 }
