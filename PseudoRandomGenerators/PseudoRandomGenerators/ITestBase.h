@@ -1,8 +1,27 @@
 #pragma once
 #include <string>
 #include <memory>
+#include "IGeneratorBase.h"
+#include <vector>
 
 class IGeneratorBase;
+struct TestResult
+{
+    std::string m_generatorName;
+    std::string m_testName;
+    unsigned int m_length;
+    bool m_isAcceptable;
+    float m_alphaBorder;
+    float m_KhiCryteriaTheory;
+    float m_KhiCryteriaPractical;
+};
+
+enum EQuantileValue
+{
+    weak,//0.1
+    medium,//0.05
+    strong//0.01
+};
 
 class ITestBase
 {
@@ -13,22 +32,21 @@ public:
         GeneratorMode
     };
 
-    explicit ITestBase(TestMode mode):m_testMode(mode){};
-    explicit ITestBase(const std::string& filename):m_testMode(FileSourceMode),m_filename(filename){};
+    explicit ITestBase(const std::string& filename):m_testMode(FileSourceMode),m_filename(filename){}
     explicit ITestBase(const std::shared_ptr<IGeneratorBase>& generator)
-        :m_testMode(GeneratorMode),m_generator(generator){};
+        :m_testMode(GeneratorMode),m_generator(generator){}
     virtual ~ITestBase()=default;
-    virtual void ExecuteTesting()=0;
-    void SetSourceFileName(const std::string& filename) { m_filename = filename; };
-    void SetGenerator(const std::shared_ptr<IGeneratorBase>& generator) { m_generator = generator; };
-    void SetTestName(const std::string& name) { m_testName = name; };
+    virtual TestResult ExecuteTesting(int length)=0;
+    void SetTestName(const std::string& name) { m_testName = name; }
 
-    const std::string& GetTestName() const{ return m_testName; };
-    void SetTestMode(TestMode mode) { m_testMode = mode; };
+    const std::string& GetTestName() const{ return m_testName; }
+protected:
+    lint GetNextValue();
+    static double GetKhiCryteriaTheoretical(int length, EQuantileValue quantile);
+    static double GetKhiCryteriaPractical(const std::vector<int>& values);
 private:
     TestMode m_testMode;
     std::string m_testName;
     std::shared_ptr<IGeneratorBase> m_generator;
     std::string m_filename;
 };
-

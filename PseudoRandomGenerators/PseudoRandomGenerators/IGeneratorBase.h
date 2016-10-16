@@ -3,6 +3,12 @@
 
 typedef NTL::ZZ lint;
 
+enum EGeneratorType
+{
+    BitGenerator,
+    ByteGenerator
+};
+
 class IGeneratorBase
 {
 public:
@@ -11,6 +17,8 @@ public:
     virtual ~IGeneratorBase() = default;
     virtual lint GetRandom() = 0;
     virtual void SetSeed(const lint& seed);
+    virtual std::string GetName() const { return "NoNameGenerator"; }
+    virtual EGeneratorType GetGeneratorType()const { return BitGenerator; }
 protected:
     lint m_seed;
 };

@@ -170,6 +170,7 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="WolframGenerator.h" />
     <ClInclude Include="ZZHelper.h" />
+    <ClInclude Include="СEquiprobablyTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BBSGenerator.cpp" />
@@ -178,6 +179,7 @@
     <ClCompile Include="BMGeneratorByte.cpp" />
     <ClCompile Include="GeffeGenerator.cpp" />
     <ClCompile Include="GeneratorCreator.cpp" />
+    <ClCompile Include="ITestBase.cpp" />
     <ClCompile Include="L20Generator.cpp" />
     <ClCompile Include="L89Generator.cpp" />
     <ClCompile Include="LehmerGeneratorGeneral.cpp" />
@@ -195,6 +197,7 @@
     </ClCompile>
     <ClCompile Include="WolframGenerator.cpp" />
     <ClCompile Include="ZZHelper.cpp" />
+    <ClCompile Include="СEquiprobablyTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\NTL\NTL.vcxproj">

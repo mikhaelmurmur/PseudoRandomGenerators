@@ -3,7 +3,14 @@
   <ItemGroup>
     <Filter Include="Generators">
       <UniqueIdentifier>{12940291-2a50-44d2-bde7-b9dd9fd1fa37}</UniqueIdentifier>
-      <Extensions>h;cpp</Extensions>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{a5be7e65-c4ab-4dae-93a2-0e19218d2136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{4b150bcb-77b6-48f0-9c97-2233a107e0ee}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,16 +40,7 @@
     <ClInclude Include="BBSGenerator.h">
       <Filter>Generators</Filter>
     </ClInclude>
-    <ClInclude Include="ZZHelper.h">
-      <Filter>Generators</Filter>
-    </ClInclude>
     <ClInclude Include="BBSGeneratorByte.h">
-      <Filter>Generators</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratorCreator.h">
-      <Filter>Generators</Filter>
-    </ClInclude>
-    <ClInclude Include="ITestBase.h">
       <Filter>Generators</Filter>
     </ClInclude>
     <ClInclude Include="GeffeGenerator.h">
@@ -66,6 +64,16 @@
     <ClInclude Include="BMGeneratorByte.h">
       <Filter>Generators</Filter>
     </ClInclude>
+    <ClInclude Include="ZZHelper.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="ITestBase.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratorCreator.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="СEquiprobablyTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">
@@ -88,13 +96,7 @@
     <ClCompile Include="BBSGenerator.cpp">
       <Filter>Generators</Filter>
     </ClCompile>
-    <ClCompile Include="ZZHelper.cpp">
-      <Filter>Generators</Filter>
-    </ClCompile>
     <ClCompile Include="BBSGeneratorByte.cpp">
-      <Filter>Generators</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratorCreator.cpp">
       <Filter>Generators</Filter>
     </ClCompile>
     <ClCompile Include="GeffeGenerator.cpp">
@@ -118,5 +120,13 @@
     <ClCompile Include="BMGeneratorByte.cpp">
       <Filter>Generators</Filter>
     </ClCompile>
+    <ClCompile Include="ZZHelper.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratorCreator.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="СEquiprobablyTest.cpp" />
+    <ClCompile Include="ITestBase.cpp" />
   </ItemGroup>
 </Project>
