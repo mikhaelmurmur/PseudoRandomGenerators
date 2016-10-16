@@ -9,10 +9,10 @@ void CXLSResultWriter::WriteResults(TestResult result)
     {
         return;
     }
-    auto sheet = resultBook->addSheet(L"firstSheet");
-        /*std::wstring(result.m_testName.begin(), 
-            result.m_testName.end()).c_str());*/
+    auto sheet = resultBook->addSheet(
+        std::wstring(result.m_testName.begin(), 
+            result.m_testName.end()).c_str());
 
-    sheet->writeNum(2, 2, 10);
+    sheet->writeNum(1, 1, 10);
     resultBook->save(std::wstring(GetFileName().begin(),GetFileName().end()).c_str());
 }
