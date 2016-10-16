@@ -6,7 +6,7 @@
 #include <iostream>
 #include "ITestBase.h"
 #include "СEquiprobablyTest.h"
-
+#include "XLSResultWriter.h"
 
 int main()
 {
@@ -24,6 +24,9 @@ int main()
         std::cout << testResults.m_results[i].m_alpha<< std::endl;
         std::cout << testResults.m_results[i].m_isAcceptable<< std::endl;
     }
+
+    CXLSResultWriter writer("tmp.xls");
+    writer.WriteResults(testResults);
     std::cin.get();
     std::cin.get();
 

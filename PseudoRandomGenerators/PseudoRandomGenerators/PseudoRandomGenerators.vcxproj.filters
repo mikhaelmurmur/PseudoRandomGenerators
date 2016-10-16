@@ -12,6 +12,9 @@
     <Filter Include="Tests">
       <UniqueIdentifier>{4b150bcb-77b6-48f0-9c97-2233a107e0ee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ResultWriters">
+      <UniqueIdentifier>{b6ecc33f-12c5-4aa8-8625-7477abc03882}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -73,7 +76,15 @@
     <ClInclude Include="GeneratorCreator.h">
       <Filter>Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="СEquiprobablyTest.h" />
+    <ClInclude Include="СEquiprobablyTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="IResultWriter.h">
+      <Filter>ResultWriters</Filter>
+    </ClInclude>
+    <ClInclude Include="XLSResultWriter.h">
+      <Filter>ResultWriters</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">
@@ -126,7 +137,14 @@
     <ClCompile Include="GeneratorCreator.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="СEquiprobablyTest.cpp" />
-    <ClCompile Include="ITestBase.cpp" />
+    <ClCompile Include="ITestBase.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="СEquiprobablyTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="XLSResultWriter.cpp">
+      <Filter>ResultWriters</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
