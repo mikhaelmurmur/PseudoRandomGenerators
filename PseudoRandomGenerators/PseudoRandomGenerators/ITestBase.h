@@ -5,15 +5,21 @@
 #include <vector>
 
 class IGeneratorBase;
+
+struct AlphaTestResult
+{
+    float m_alpha;
+    bool m_isAcceptable;
+    double m_KhiCryteriaTheory;
+    double m_KhiCryteriaPractical;
+};
+
 struct TestResult
 {
     std::string m_generatorName;
     std::string m_testName;
     unsigned int m_length;
-    bool m_isAcceptable;
-    float m_alphaBorder;
-    float m_KhiCryteriaTheory;
-    float m_KhiCryteriaPractical;
+    AlphaTestResult m_results[3];
 };
 
 enum EQuantileValue
@@ -42,6 +48,7 @@ public:
     const std::string& GetTestName() const{ return m_testName; }
 protected:
     lint GetNextValue();
+    const std::string& GetGeneratorName()const { return m_generator->GetName(); }
     static double GetKhiCryteriaTheoretical(int length, EQuantileValue quantile);
     static double GetKhiCryteriaPractical(const std::vector<int>& values);
 private:
