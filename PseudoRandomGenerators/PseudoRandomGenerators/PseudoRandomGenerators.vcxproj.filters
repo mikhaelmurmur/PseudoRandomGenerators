@@ -88,6 +88,9 @@
     <ClInclude Include="IndependenceTest.h">
       <Filter>Tests</Filter>
     </ClInclude>
+    <ClInclude Include="UniformityTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StandartGenerator.cpp">
@@ -150,6 +153,9 @@
       <Filter>ResultWriters</Filter>
     </ClCompile>
     <ClCompile Include="IndependenceTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="UniformityTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>

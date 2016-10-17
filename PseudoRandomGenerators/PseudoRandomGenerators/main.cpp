@@ -5,14 +5,14 @@
 #include "GeneratorCreator.h"
 #include <iostream>
 #include "ITestBase.h"
-#include "IndependenceTest.h"
+#include "UniformityTest.h"
 #include "XLSResultWriter.h"
 
 int main()
 {
     CGeneratorCreator generatorCreator;
-    auto generator = generatorCreator.CreateGenerator(CGeneratorCreator::Standart,lint(100));
-    std::unique_ptr<ITestBase> test = std::make_unique<CIndependenceTest>(generator);
+    auto generator = generatorCreator.CreateGenerator(CGeneratorCreator::Librarian,lint(100));
+    std::unique_ptr<ITestBase> test = std::make_unique<СUniformityTest>(generator);
     auto testResults = test->ExecuteTesting(1000000);
     std::cout << testResults.m_testName << std::endl;
     std::cout << testResults.m_generatorName<< std::endl;
