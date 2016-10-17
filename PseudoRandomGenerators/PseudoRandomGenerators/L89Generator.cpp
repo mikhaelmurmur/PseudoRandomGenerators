@@ -19,7 +19,7 @@ lint CL89Generator::GetRandom()
 void CL89Generator::GenerateStates(const lint& number)
 {
     m_L89.SetCoefs(ms_L89Coefs);
-    lint a = number&(((lint)(1<<89))-1);
+    lint a = number&(((lint)(1<<89))-1); //TODO: you know what to do
     m_L89.SetState(ZZHelper::ParseDequeFromLint(a, 89));
 }
 

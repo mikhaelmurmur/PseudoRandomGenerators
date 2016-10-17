@@ -6,8 +6,9 @@
 #include <iostream>
 #include "TestCreator.h"
 #include "XLSResultWriter.h"
+#include "GeffeGenerator.h"
 
-int main()
+void CalculateStatistics()
 {
     CGeneratorCreator generatorCreator;
     CTestCreator testCreator;
@@ -27,6 +28,11 @@ int main()
         }
     }
     resultXLS.SaveResult();
+}
+
+int main()
+{
+    CalculateStatistics();
 
     return 0;
 }

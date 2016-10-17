@@ -15,6 +15,12 @@ public:
         Librarian,
         BBS,
         BBSByte,
+        Geffe,
+        L20,
+        L89,
+        Wolfram,
+        BM,
+        BMByte,
         Count
     };
 
