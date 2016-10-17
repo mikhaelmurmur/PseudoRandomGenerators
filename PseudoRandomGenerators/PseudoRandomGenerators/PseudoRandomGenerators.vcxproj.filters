@@ -76,9 +76,6 @@
     <ClInclude Include="GeneratorCreator.h">
       <Filter>Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="СEquiprobablyTest.h">
-      <Filter>Tests</Filter>
-    </ClInclude>
     <ClInclude Include="IResultWriter.h">
       <Filter>ResultWriters</Filter>
     </ClInclude>
@@ -90,6 +87,12 @@
     </ClInclude>
     <ClInclude Include="UniformityTest.h">
       <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="EquiprobablyTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCreator.h">
+      <Filter>Helpers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -146,9 +149,6 @@
     <ClCompile Include="ITestBase.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
-    <ClCompile Include="СEquiprobablyTest.cpp">
-      <Filter>Tests</Filter>
-    </ClCompile>
     <ClCompile Include="XLSResultWriter.cpp">
       <Filter>ResultWriters</Filter>
     </ClCompile>
@@ -156,6 +156,12 @@
       <Filter>Tests</Filter>
     </ClCompile>
     <ClCompile Include="UniformityTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCreator.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="EquiprobablyTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
   </ItemGroup>

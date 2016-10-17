@@ -10,6 +10,7 @@ public:
     virtual ~CLibrarianGenerator()=default;
     lint GetRandom()override;
     void SetSeed(const lint& seed)override;
+    const char * GetName() const override { return "Librarian Generator"; }
     EGeneratorType GetGeneratorType()const override { return ByteGenerator; }
 private:
     static const std::string RANDOM_SOURCE_FILE_NAME;

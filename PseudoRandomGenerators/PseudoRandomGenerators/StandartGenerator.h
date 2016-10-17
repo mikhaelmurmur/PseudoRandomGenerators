@@ -8,5 +8,6 @@ public:
     virtual ~CStandartGenerator()=default;
     lint GetRandom()override;
     EGeneratorType GetGeneratorType()const override { return ByteGenerator; }
+    const char * GetName() const override { return "Standart Generator"; }
 };
 

@@ -2,14 +2,14 @@
 #include "ITestBase.h"
 #include "ZZHelper.h"
 
-class СEquiprobablyTest :
+class CEquiprobablyTest :
     public ITestBase
 {
 public:
-    explicit СEquiprobablyTest(const std::string& filename):ITestBase(filename) {}
-    explicit СEquiprobablyTest(const std::shared_ptr<IGeneratorBase>& generator)
+    explicit CEquiprobablyTest(const std::string& filename):ITestBase(filename) {}
+    explicit CEquiprobablyTest(const std::shared_ptr<IGeneratorBase>& generator)
         :ITestBase(generator){}
-    virtual ~СEquiprobablyTest() = default;
+    virtual ~CEquiprobablyTest() = default;
     TestResult ExecuteTesting(int length) override;
 
 private:

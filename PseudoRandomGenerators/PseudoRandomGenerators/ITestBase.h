@@ -23,7 +23,6 @@ struct TestResult
 };
 
 
-
 class ITestBase
 {
 public:

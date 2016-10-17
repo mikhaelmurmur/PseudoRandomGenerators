@@ -4,31 +4,29 @@
 #include "stdafx.h"
 #include "GeneratorCreator.h"
 #include <iostream>
-#include "ITestBase.h"
-#include "UniformityTest.h"
+#include "TestCreator.h"
 #include "XLSResultWriter.h"
 
 int main()
 {
     CGeneratorCreator generatorCreator;
-    auto generator = generatorCreator.CreateGenerator(CGeneratorCreator::Librarian,lint(100));
-    std::unique_ptr<ITestBase> test = std::make_unique<СUniformityTest>(generator);
-    auto testResults = test->ExecuteTesting(1000000);
-    std::cout << testResults.m_testName << std::endl;
-    std::cout << testResults.m_generatorName<< std::endl;
-    std::cout << testResults.m_length<< std::endl;
-    for(int i=0;i<3;++i)
+    CTestCreator testCreator;
+    CXLSResultWriter resultXLS("results.xls");
+    for(int generatorIndex = 0;generatorIndex<CGeneratorCreator::Count;++generatorIndex)
     {
-        std::cout << testResults.m_results[i].m_KhiCryteriaPractical << std::endl;
-        std::cout << testResults.m_results[i].m_KhiCryteriaTheory << std::endl;
-        std::cout << testResults.m_results[i].m_alpha<< std::endl;
-        std::cout << testResults.m_results[i].m_isAcceptable<< std::endl;
+        auto generator = generatorCreator.CreateGenerator(static_cast<CGeneratorCreator::GeneratorType>(generatorIndex), lint(100));
+        resultXLS.AddSheet(std::string(generator->GetName()));
+        for(int size = 1000;size<100000;size*=10)
+        {
+            for(int testIndex = 0;testIndex<CTestCreator::count;++testIndex)
+            {
+                auto test = testCreator.CreateTesting(static_cast<CTestCreator::ETestTypes>(testIndex), generator);
+                auto result = test->ExecuteTesting(size);
+                resultXLS.WriteResults(result);
+            }
+        }
     }
-
-    CXLSResultWriter writer("tmp.xls");
-    writer.WriteResults(testResults);
-    std::cin.get();
-    std::cin.get();
+    resultXLS.SaveResult();
 
     return 0;
 }

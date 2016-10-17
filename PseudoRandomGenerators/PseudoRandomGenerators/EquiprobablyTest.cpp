@@ -1,9 +1,9 @@
 ﻿#include "stdafx.h"
-#include "СEquiprobablyTest.h"
+#include "EquiprobablyTest.h"
 #include <vector>
 #include "ZZHelper.h"
 
-void СEquiprobablyTest::FillResults(int length, TestResult& result,const std::vector<int>& bytesCount)const
+void CEquiprobablyTest::FillResults(int length, TestResult& result,const std::vector<int>& bytesCount)const
 {//bullshit
     result.m_testName = GetTestName();
     result.m_generatorName = GetGeneratorName();
@@ -33,7 +33,7 @@ void СEquiprobablyTest::FillResults(int length, TestResult& result,const std::v
     result.m_results[2].m_alpha = 0.01f;
 }
 
-TestResult СEquiprobablyTest::ExecuteTesting(int length)
+TestResult CEquiprobablyTest::ExecuteTesting(int length)
 {
     TestResult result;
     std::vector<int> bytesCount(256);
@@ -48,12 +48,12 @@ TestResult СEquiprobablyTest::ExecuteTesting(int length)
 }
 
 
-double СEquiprobablyTest::GetKhiCryteriaTheoretical(int length, ZZHelper::EQuantileValue quantile)
+double CEquiprobablyTest::GetKhiCryteriaTheoretical(int length, ZZHelper::EQuantileValue quantile)
 {
     return (sqrt(255 * 2)*GetQuantileValue(quantile) + 255);
 }
 
-double СEquiprobablyTest::GetKhiCryteriaPractical(const std::vector<int>& values, int length)
+double CEquiprobablyTest::GetKhiCryteriaPractical(const std::vector<int>& values, int length)
 {
     double result = 0;
     const double mediana = length / 256.;
