@@ -6,7 +6,7 @@ class СUniformityTest :
     public ITestBase
 {
 public:
-    explicit СUniformityTest(const std::string& filename) :ITestBase(filename) {}
+    explicit СUniformityTest(const std::string& filename) :ITestBase(filename) { SetTestName("Uniformity test"); }
     explicit СUniformityTest(const std::shared_ptr<IGeneratorBase>& generator)
         :ITestBase(generator) {}
     virtual ~СUniformityTest() = default;

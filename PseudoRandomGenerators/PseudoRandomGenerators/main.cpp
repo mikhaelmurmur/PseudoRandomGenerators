@@ -13,11 +13,12 @@ void CalculateStatistics()
     CGeneratorCreator generatorCreator;
     CTestCreator testCreator;
     CXLSResultWriter resultXLS("results.xls");
-    for(int generatorIndex = 0;generatorIndex<CGeneratorCreator::Count;++generatorIndex)
+    for(int generatorIndex = 0;generatorIndex<CGeneratorCreator::Count-2;++generatorIndex)
     {
         auto generator = generatorCreator.CreateGenerator(static_cast<CGeneratorCreator::GeneratorType>(generatorIndex), lint(100));
         resultXLS.AddSheet(std::string(generator->GetName()));
-        for(int size = 1000;size<100000;size*=10)
+        int size = 1000000;
+        //for(int size = 1000;size<10000;size*=10)
         {
             for(int testIndex = 0;testIndex<CTestCreator::count;++testIndex)
             {

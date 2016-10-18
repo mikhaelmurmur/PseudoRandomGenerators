@@ -5,7 +5,7 @@
 
 void CEquiprobablyTest::FillResults(int length, TestResult& result,const std::vector<int>& bytesCount)const
 {//bullshit
-    result.m_testName = GetTestName();
+    result.m_testName = L"Equiprobability test";//GetTestName();
     result.m_generatorName = GetGeneratorName();
 
     result.m_length = length;

@@ -6,7 +6,7 @@ class CEquiprobablyTest :
     public ITestBase
 {
 public:
-    explicit CEquiprobablyTest(const std::string& filename):ITestBase(filename) {}
+    explicit CEquiprobablyTest(const std::string& filename):ITestBase(filename) { SetTestName("Equiprobability test"); }
     explicit CEquiprobablyTest(const std::shared_ptr<IGeneratorBase>& generator)
         :ITestBase(generator){}
     virtual ~CEquiprobablyTest() = default;

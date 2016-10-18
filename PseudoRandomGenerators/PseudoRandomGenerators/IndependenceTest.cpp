@@ -4,7 +4,7 @@
 void CIndependenceTest::FillResult(int length, TestResult& result, const std::vector<int>& values, 
     const std::vector<int>& firstValues, const std::vector<int>& secondValues) const
 {
-    result.m_testName = GetTestName();
+    result.m_testName = L"Independence Test";//GetTestName();
     result.m_generatorName = GetGeneratorName();
 
     result.m_length = length;

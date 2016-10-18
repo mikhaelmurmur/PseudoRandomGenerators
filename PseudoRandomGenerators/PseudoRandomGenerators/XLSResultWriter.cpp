@@ -23,7 +23,7 @@ void CXLSResultWriter::AddSheet(std::string sheetName)
 void CXLSResultWriter::WriteResults(TestResult result)
 {
     m_currentSheet->writeNum(1, m_currentColumn, result.m_length);
-    m_currentSheet->writeStr(2, m_currentColumn, GetWCharFromSting(result.m_testName).c_str());
+    m_currentSheet->writeStr(2, m_currentColumn, result.m_testName.c_str());// GetWCharFromSting(result.m_testName).c_str());
     for(int alphaIndex=0;alphaIndex<3;++alphaIndex)
     {
         m_currentSheet->writeNum(3, m_currentColumn, result.m_results[alphaIndex].m_alpha);
@@ -36,6 +36,6 @@ void CXLSResultWriter::WriteResults(TestResult result)
 
 void CXLSResultWriter::SaveResult()
 {
-    m_excelBook->save(L"tmp.xls");//GetWCharFromSting(GetFileName()));
+    m_excelBook->save(L"Results.xls");//GetWCharFromSting(GetFileName()));
     m_excelBook->release();
 }

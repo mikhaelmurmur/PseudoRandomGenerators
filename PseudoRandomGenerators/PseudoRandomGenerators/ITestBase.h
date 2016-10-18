@@ -17,7 +17,7 @@ struct AlphaTestResult
 struct TestResult
 {
     std::string m_generatorName;
-    std::string m_testName;
+    std::wstring m_testName;
     unsigned int m_length;
     AlphaTestResult m_results[3];
 };
@@ -39,7 +39,8 @@ public:
     virtual TestResult ExecuteTesting(int length)=0;
     void SetTestName(const std::string& name) { m_testName = name; }
 
-    const std::string& GetTestName() const{ return m_testName; }
+    std::wstring GetTestName() const
+    { return std::wstring(m_testName.begin(),m_testName.end()); }
 protected:
     lint GetNextValue();
     std::string GetGeneratorName()const { return m_generator->GetName(); }

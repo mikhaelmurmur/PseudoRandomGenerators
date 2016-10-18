@@ -40,7 +40,7 @@ TestResult СUniformityTest::ExecuteTesting(int length)
 void СUniformityTest::FillResults(int length, TestResult& result, const std::vector<int>& bytesCountTotal, 
     std::vector<std::vector<int>> bytesPerSegment, int segmentsCount) const
 {//bullshit
-    result.m_testName = GetTestName();
+    result.m_testName = L"Uniformity test";//GetTestName();
     result.m_generatorName = GetGeneratorName();
 
     result.m_length = length;
