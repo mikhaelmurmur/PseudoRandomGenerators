@@ -30,8 +30,8 @@ void CXLSResultWriter::WriteResults(TestResult result)
         m_currentSheet->writeNum(4, m_currentColumn, result.m_results[alphaIndex].m_KhiCryteriaPractical);
         m_currentSheet->writeNum(5, m_currentColumn, result.m_results[alphaIndex].m_KhiCryteriaTheory);
         m_currentSheet->writeStr(6, m_currentColumn, result.m_results[alphaIndex].m_isAcceptable ? L"true" : L"false");
+        ++m_currentColumn;
     }
-    ++m_currentColumn;
 }
 
 void CXLSResultWriter::SaveResult()
