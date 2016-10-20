@@ -14,7 +14,7 @@ namespace ZZHelper
     lint LintFromHex(char value);
     lint LintFromHex(const std::string& hexValue);
     lint Merge3ValuesOfLint(const lint& value9, const lint& value10, const lint& value11 );//create seed for geffe
-    lint CycleBitShift(lint number);
+    lint CycleBitShift(const lint& number, bool isLeftShift);
     std::deque<int> ParseDequeFromLint(lint number, int numberOfDigits);
     float GetQuantileValue(EQuantileValue quantile);
 }

@@ -1,11 +1,10 @@
 #pragma once
 #include <deque>
-#include <string>
 
 class CLinearShiftRegister
 {
 public:
-    CLinearShiftRegister()=default;
+    explicit CLinearShiftRegister()=default;
     virtual ~CLinearShiftRegister()=default;
     int GetNextBit();
     void SetState(const std::deque<int>& state) { m_registerState = state; };

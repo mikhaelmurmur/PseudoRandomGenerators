@@ -4,7 +4,7 @@ class CWolframGenerator :
     public IGeneratorBase
 {
 public:
-    explicit CWolframGenerator(const lint& seed = lint(1)) {}
+    explicit CWolframGenerator(const lint& seed = lint(1)):IGeneratorBase(seed) {}
     virtual ~CWolframGenerator() = default;
     lint GetRandom()override;
     EGeneratorType GetGeneratorType()const override { return BitGenerator; }

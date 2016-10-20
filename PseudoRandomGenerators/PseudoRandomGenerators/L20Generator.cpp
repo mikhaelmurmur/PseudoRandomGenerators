@@ -2,7 +2,7 @@
 #include "L20Generator.h"
 #include "ZZHelper.h"
 
- const std::deque<int> CL20Generator::ms_L20Coefs = { 0,11,15,17 };
+ const std::deque<int> CL20Generator::L20COEFS = { 0,11,15,17 };
 
 CL20Generator::CL20Generator(const lint& seed)
 {
@@ -12,13 +12,13 @@ CL20Generator::CL20Generator(const lint& seed)
 
 lint CL20Generator::GetRandom()
 {
-    return static_cast<lint>(m_L20.GetNextBit()); //TODO: maybe better to construct a tmp var
+    return lint(m_L20.GetNextBit()); //TODO: maybe better to construct a tmp var
 }
 
 void CL20Generator::GenerateStates(const lint& number)
 {
-    m_L20.SetCoefs(ms_L20Coefs);
+    m_L20.SetCoefs(L20COEFS);
     // the same
-    lint a = number&(1048576); //TODO:: what the fuck??? naming 
-    m_L20.SetState(ZZHelper::ParseDequeFromLint(a, 20));
+    lint L20StateValue = number&(1048575); 
+    m_L20.SetState(ZZHelper::ParseDequeFromLint(L20StateValue, 20));
 }

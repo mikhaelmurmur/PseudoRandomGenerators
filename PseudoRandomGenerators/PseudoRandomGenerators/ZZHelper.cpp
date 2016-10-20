@@ -23,6 +23,7 @@ namespace ZZHelper
         return result;
     }
 
+
     lint LintFromHex(const std::string& hexValue)
     {
         lint result = lint(0);
@@ -40,19 +41,23 @@ namespace ZZHelper
         return value9 + (value10 << 9) + (value11 << 19);
     }
 
-    lint CycleBitShift(lint number,char letter) 
+    lint CycleBitShift(const lint& number,bool isLeftShift) 
     {
-        if (letter == 'r')
+        long realNumber = number.rep[1];
+        if (isLeftShift)
         {
-            lint firstDigit = number & 1;
-
+            return lint((realNumber << 1) + ((realNumber & (1 << 31)) >> 31));
         }
-        return lint(0);
+        return lint((realNumber >> 1) + ((realNumber & 1) << 31));
     }
 
-    std::deque<int> ParseDequeFromLint(lint number, int numberOfDigits)
+    std::deque<int> ParseDequeFromLint(lint number, int numberOfDigits)    ///
     {
         std::deque<int> resultDeque;
+        if (numberOfDigits == 10)
+            number >>= 9;
+        if (numberOfDigits == 11)
+            number >>= 19;
         for (int i = 0; i < numberOfDigits; ++i)
         {
             resultDeque.push_back((number%NTL_MAX_INT) & 1);

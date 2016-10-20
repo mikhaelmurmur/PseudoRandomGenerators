@@ -13,7 +13,7 @@ public:
     EGeneratorType GetGeneratorType()const override { return BitGenerator; }
     const char * GetName() const override { return "L20 Generator"; }
 private:
-    static const std::deque<int> ms_L20Coefs; //TODO: lovely naming, soft server
+    static const std::deque<int> L20COEFS; //TODO: lovely naming, soft server
     CLinearShiftRegister m_L20;
     void GenerateStates(const lint& number);
 };

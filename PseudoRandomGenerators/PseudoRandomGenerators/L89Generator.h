@@ -12,7 +12,7 @@ public:
     EGeneratorType GetGeneratorType()const override { return BitGenerator; }
     const char * GetName() const override { return "L89 Generator"; }
 private:
-    static const std::deque<int> ms_L89Coefs; //TODO: fucking naming
+    static const std::deque<int> L89COEFS; 
     CLinearShiftRegister m_L89;
     void GenerateStates(const lint& number);
 };
