@@ -252,3 +252,4 @@ paket-files/
 *.sln.iml
 /Docs/TestViewDoc.xlsx
 /PseudoRandomGenerators/PseudoRandomGenerators/tmp.xls
+/Docs

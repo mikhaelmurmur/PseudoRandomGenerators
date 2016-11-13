@@ -71,13 +71,13 @@ namespace ZZHelper
         switch (quantile)
         {
         case weak:
-            return 2.326f;
+            return 4.61f;
 
         case medium:
-            return  2.56f;
+            return  5.99f;
 
         case strong:
-            return 3.175f;
+            return 9.21f;
         }
         return 0.f;
     }

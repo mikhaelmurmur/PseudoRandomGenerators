@@ -17,7 +17,7 @@ void CalculateStatistics()
     {
         auto generator = generatorCreator.CreateGenerator(static_cast<CGeneratorCreator::GeneratorType>(generatorIndex), lint(100));
         resultXLS.AddSheet(std::string(generator->GetName()));
-        int size = 100000;
+        int size = 1000000;
         //for(int size = 1000;size<10000;size*=10)
         {
             for(int testIndex = 0;testIndex<CTestCreator::count;++testIndex)
@@ -34,10 +34,6 @@ void CalculateStatistics()
 int main()
 {
     CalculateStatistics();
-    std::cin.get();
-    std::cin.get();
     return 0;
-
-    
 }
 

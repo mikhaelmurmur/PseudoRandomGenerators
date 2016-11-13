@@ -65,6 +65,10 @@ double CIndependenceTest::GetKhiCryteriaPractical(const std::vector<int>& values
     {
         for(int secondByte = 0;secondByte<256;++secondByte)
         {
+            if((secondValues[secondByte]==0)||(firstValues[firstByte]==0))
+            {
+                continue;
+            }
             result += (values[256 * firstByte + secondByte])*
                 static_cast<double>((values[256 * firstByte + secondByte]))
                 / (secondValues[secondByte]*
