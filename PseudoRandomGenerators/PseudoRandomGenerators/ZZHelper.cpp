@@ -43,13 +43,46 @@ namespace ZZHelper
 
     lint CycleBitShift(const lint& number,bool isLeftShift) 
     {
-        long realNumber = number.rep[1];
+        lint result(1);
+        long nullState2Digit = ((result.rep).rep)[3];
+        long firstDigit, secondDigit;
+        if (((number.rep).rep)[0] == 2)
+        {
+            firstDigit = ((number.rep).rep)[1];
+            secondDigit = ((number.rep).rep)[2];
+        }
+        else
+        {
+            firstDigit = ((number.rep).rep)[1];
+            secondDigit = 0;
+        }
         if (isLeftShift)
         {
-            return lint((realNumber << 1) + ((realNumber & (1 << 31)) >> 31));
+            if (((firstDigit & (1 << 30)) >> 30) == 0)
+                ((result.rep).rep)[2] = nullState2Digit;
+            else
+                ((result.rep).rep)[2] = (firstDigit & (1 << 30)) >> 30;
+            ((result.rep).rep)[1] = (firstDigit << 1) + secondDigit;
+            if (((result.rep).rep)[2] == nullState2Digit)
+                ((result.rep).rep)[0] = 1;
+            else
+                ((result.rep).rep)[0] = 2;
         }
-        return lint((realNumber >> 1) + ((realNumber & 1) << 31));
+        else
+        {
+            if ( (firstDigit & 1) == 0)
+                ((result.rep).rep)[2] = nullState2Digit;
+            else
+                ((result.rep).rep)[2] = (firstDigit & 1);
+            ((result.rep).rep)[1] = ((secondDigit << 30) + (firstDigit >> 1));
+            if (((result.rep).rep)[2] == nullState2Digit)
+                ((result.rep).rep)[0] = 1;
+            else
+                ((result.rep).rep)[0] = 2;
+        }
+        return result;
     }
+    
 
     std::deque<int> ParseDequeFromLint(lint number, int numberOfDigits)    ///
     {
